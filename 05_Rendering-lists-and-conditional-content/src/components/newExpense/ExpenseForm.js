@@ -50,7 +50,7 @@ export default function ExpenseForm(props) {
         event.preventDefault();
         const inputValues = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate)
         }
 
