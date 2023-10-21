@@ -44,7 +44,7 @@ const Login = (props) => {
     const identifier = setTimeout(() => {
       console.log('Checking form validity!');
       setFormIsValid(
-        emailState.valid && passwordState.valid
+        emailState.isValid && passwordState.isValid
       );
     }, 500);
 
@@ -88,7 +88,7 @@ const Login = (props) => {
       <form onSubmit={submitHandler}>
         <div
           className={`${classes.control} ${
-            emailState.valid === false ? classes.invalid : ''
+            emailState.isValid === false ? classes.invalid : ''
           }`}
         >
           <label htmlFor="email">E-Mail</label>
